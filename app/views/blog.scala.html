@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Clay & Twill - makeup and clothing for professionals</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css")"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/jQuery.iPicture.css")"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/jquery.sidr.light.css")"/>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jQuery.iPicture.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.masonry.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/modernizr-2.5.3.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.sidr.min.js")"></script>
+
+<script>
+jQuery(document).ready(function(){
+        $( "#iPicture" ).iPicture({
+                animation: true,
+                animationBg: "bgblack",
+                animationType: "ltr-slide",
+                pictures: ["picture1"],
+                button: "moreblack",
+                moreInfos:{"picture1":[{"id":"tooltip1","descr":"$299, where to buy","top":"185px","left":"43px"},
+                                       {"id":"tooltip2","descr":"$199, where to buy","top":"236px","left":"183px"},
+                                       {"id":"tooltip3","descr":"$399, where to buy","top":"61px","left":"226px"}]}
+              });
+
+
+$('#makeMeDraggable').draggable({
+    cursor: 'move',
+    containment: 'document',
+    helper: myHelper
+    });
+
+$('#makeMeDroppable').droppable({
+    drop: handleDropEvent
+    });
+
+$('#tooltip1').sidr({
+    name: 'comment-callback',
+    side: 'right',
+    source: function(name) {
+        return '<h1>Comments about this item: </h1><oi><li>user comment 1</li><li>user comment 2</li><li>user comment 3</li></ol>';
+    }
+});
+
+}); // end of ready
+
+function myHelper( event ) {
+    return '<div id="draggableHelper">Fit me onto the model</div>';
+}
+
+function handleDropEvent( event, ui ) {
+    var draggable = ui.draggable;
+    alert( 'Now swap picture of model with this piece' );
+}
+
+</script>
+
+    </head>
+    <body>
+
+        <div class="brand">
+            <a href="@routes.Application.index()"><h2>Clay & Twill</h2></a>
+        </div>
+
+        <div class="content">
+           <div id="iPicture">
+            <div class="slide" style="margin-top: 100px;">
+             <div id="picture1" style="background: url('http://ak2.polyvoreimg.com/cgi/img-set/cid/91830604/id/YV4qQFArTjG02Z7nRcVM2w/size/l.jpg') no-repeat scroll 0 0 #393737; width: 300px; height: 300px;position: relative; margin:0 auto;"></div>
+            </div>
+           </div>
+        </div>
+
+      <!--  <div id="content" style="height: 400px;"> -->
+      <!--      <div id="makeMeDraggable"> </div> -->
+      <!--      <div id="makeMeDroppable"> </div> -->
+      <!--    </div> -->
+
+        </body>
+    </html>

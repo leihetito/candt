@@ -19,14 +19,6 @@
 
 <script>
 jQuery(document).ready(function(){
-        $( "#iPicture" ).iPicture({
-                animation: true,
-                animationBg: "bgblack",
-                animationType: "ltr-slide",
-                pictures: ["picture1","picture2","picture3","picture4","picture5"],
-                button: "moreblack",
-                moreInfos:{"picture1":[{"id":"tooltip1","descr":"furniture: 299$","top":"185px","left":"393px"},{"id":"tooltip2","descr":"sofa: 199$","top":"346px","left":"483px"},{"id":"tooltip3","descr":"silver candle: 2.99$","top":"461px","left":"556px"}]}
-              });
 
 $('#container').masonry({
     columnWidth: 320,
@@ -37,26 +29,7 @@ $('#container').masonry({
     $(this).masonry('reload');
   });
 
-$('#makeMeDraggable').draggable({
-    cursor: 'move',
-    containment: 'document',
-    helper: myHelper
-    });
-
-$('#makeMeDroppable').droppable({
-    drop: handleDropEvent
-    });
-
 }); // end of ready
-
-function myHelper( event ) {
-    return '<div id="draggableHelper">Fit me onto the model</div>';
-}
-
-function handleDropEvent( event, ui ) {
-    var draggable = ui.draggable;
-    alert( 'Now swap picture of model with this piece' );
-}
 
 </script>
 
@@ -69,7 +42,7 @@ function handleDropEvent( event, ui ) {
                     <a class="brand" href="@routes.Application.index()">Clay & Twill</a>
                     <ul class="nav">
                         <li class="@("active".when(nav == "signup"))">
-                        <a href="@routes.SignUp.form">Blog</a>
+                        <a href="@routes.Blog.index">Blog</a>
                         </li>
                         <li class="@("active".when(nav == "contact"))">
                         <a href="@routes.Contacts.form">Contacts</a>
@@ -79,69 +52,57 @@ function handleDropEvent( event, ui ) {
             </div>
         </div>
 
-        <div class="content">
-           <div id="iPicture">
-            <div class="slide">
-             <div id="picture1" style="background: url('/assets/images/christmas.jpg') no-repeat scroll 0 0 #393737; width: 900px; height: 528px;position: relative; margin:0 auto;"></div>
-            </div>
-           </div>
-        </div>
-
-        <div id="container" class="container clearfix">
+        <div id="container" class="container clearfix" style="margin-top: 100px;">
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-1.jpg")" alt="" />
+                <img src="http://media-cache-ak0.pinimg.com/736x/69/18/42/691842610809f0cb8280ff1f23c6cd0c.jpg" alt="" />
             </div>
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-2.jpg")" alt="" />
+                <img src="http://media-cache-ec0.pinimg.com/736x/a0/fc/47/a0fc47eee44b78ec6893bdf123e58cd9.jpg" alt="" />
+            </div>
+
+            <div class="item">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR3wAYWh_w-bfATsVxviquSLehQ_mnZGVkLQRQiJ3JuelBHUN0T" alt="" />
             </div>
 
             <div class="item featured">
-                <img src="@routes.Assets.at("images/double-1.jpg")" alt="" />
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTCsB2HVfJRlAVT52DcRFh_Ik1AzDhFM4u9aCgBrBeZWwoypbKbVw" alt="" />
             </div>
 
             <div class="item">
-                <img src="https://s3.amazonaws.com/zootool.static/no/page.large.png" alt="" />
-            </div>
-
-            <div class="item">
-                <img src="@routes.Assets.at("images/single-4.jpg")" alt="" />
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuoGvvfL7nE1fwyAP5_BWqDWwjZMC__UpwC_H2o4_wxqGgQWADqw" alt="" />
             </div>
 
             <div class="item featured">
-                <img src="@routes.Assets.at("images/double-2.jpg")" alt="" />
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQneeyHU4QtHjl-U535DC5dUZ4Y_R8zxbWizhMUV9WKFCvLhK9zig" alt="" />
             </div>
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-5.jpg")" alt="" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpD7Q2YeGaTBPFIwVlYMz74VRZqI8C7waUYponUWdX-QY73CZ_" alt="" />
             </div>
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-6.jpg")" alt="" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9mS7xZ2asfZEXtyGB79ac9CpdncmQTykMGqW6VU8MK6yLsUwZA" alt="" />
             </div>
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-7.jpg")" alt="" />
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjxczwNINnM3wi0NnKEqtBaVnkj0mGOyFJnhErYUehYqleOBKsWg" alt="" />
             </div>
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-8.jpg")" alt="" />
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSA_KbU9_dZJgUi5sqpE_N11ii7PhbN3gUtCp9XKMYUNbM0Lf7U" alt="" />
             </div>
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-9.jpg")" alt="" />
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQheqPQyiym5_41VMYuQ91aqrcpgLJt9pBQ72iWZmO_bkqKySeO" alt="" />
             </div>
 
             <div class="item">
-                <img src="@routes.Assets.at("images/single-10.jpg")" alt="" />
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQwCD-SO9EOx5aYNBFy8wLWwfjpFwhf-z5poWL1hRDWIZZIGTXLQw" alt="" />
             </div>
 
         </div>
 
-        <div id="content" style="height: 400px;">
-            <div id="makeMeDraggable"> </div>
-            <div id="makeMeDroppable"> </div>
-        </div>
     </body>
 </html>

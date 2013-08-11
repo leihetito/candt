@@ -3,6 +3,8 @@ project/project
 project/target
 target
 tmp
+.idea/*
+.idea_modules/*
 .idea
 .idea_modules
 .gitignore
