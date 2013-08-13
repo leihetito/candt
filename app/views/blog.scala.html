@@ -50,6 +50,20 @@ $('#tooltip1').sidr({
         return '<h1>Comments about this item: </h1><oi><li>user comment 1</li><li>user comment 2</li><li>user comment 3</li></ol>';
     }
 });
+$('#tooltip2').sidr({
+    name: 'comment-callback',
+    side: 'right',
+    source: function(name) {
+    return '<h1>Comments about this item: </h1><oi><li>user comment 1</li><li>user comment 2</li><li>user comment 3</li></ol>';
+    }
+});
+$('#tooltip3').sidr({
+    name: 'comment-callback',
+    side: 'right',
+    source: function(name) {
+    return '<h1>Comments about this item: </h1><oi><li>user comment 1</li><li>user comment 2</li><li>user comment 3</li></ol>';
+    }
+});
 
 }); // end of ready
 
@@ -58,8 +72,9 @@ function myHelper( event ) {
 }
 
 function handleDropEvent( event, ui ) {
-    var draggable = ui.draggable;
-    alert( 'Now swap picture of model with this piece' );
+    $('#droppableimg').attr("src", "http://lp.hm.com/hmprod?set=key[source],value[/environment/2013/1CA_0411_036R_2.jpg]&set=key[rotate],value[0.4]&set=key[width],value[3889]&set=key[height],value[4548]&set=key[x],value[625]&set=key[y],value[136]&set=key[type],value[FASHION_FRONT]&hmver=2&call=url[file:/product/large]");
+    $('#droppableimg').attr("style", "width: 200px; height: 250px");
+
 }
 
 </script>
@@ -79,10 +94,14 @@ function handleDropEvent( event, ui ) {
            </div>
         </div>
 
-      <!--  <div id="content" style="height: 400px;"> -->
-      <!--      <div id="makeMeDraggable"> </div> -->
-      <!--      <div id="makeMeDroppable"> </div> -->
-      <!--    </div> -->
+        <div id="content">
+            <div id="makeMeDraggable">
+                <img src="http://lp.hm.com/hmprod?set=key[source],value[/model/2013/1CA%200184825%20001%2021%202003%203.jpg]&set=key[rotate],value[]&set=key[width],value[]&set=key[height],value[]&set=key[x],value[]&set=key[y],value[]&set=key[type],value[STILL_LIFE_FRONT]&hmver=3&call=url[file:/product/large]" style="width: 200px; height: 250px">
+            </div>
+            <div id="makeMeDroppable">
+                <img id="droppableimg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR2UNNgtlb6r7BSQoxG1SV5pvcBWsfuCEYOqXX83EC0cKIXuiEa">
+            </div>
+        </div>
 
         </body>
     </html>
