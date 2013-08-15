@@ -242,8 +242,34 @@ td { vertical-align: top; }
 }
 
 .item img {
-	width: 300px;
-	height: auto;
+	width: 250px;
+	height: 300px;
+}
+
+.item a {
+  width: 250px;
+  font-size: 13px;
+  font-weight: bold;
+  background: #6E6E6E;
+  color: white;
+  display: block;
+  border-radius: 10px 10px 8px 8px;
+}
+
+.item a:hover {
+  background: #A2C;
+  color: white;
+}
+
+.item img {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.item .example-title {
+  padding: 5px 10px;
+  margin: 0;
 }
 
 .featured img {
