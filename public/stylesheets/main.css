@@ -26,3 +26,91 @@
   margin-left: auto ;
   margin-right: auto ;
 }
+
+.productimg {
+  width: 300px;
+  height: 400px;
+  margin-left: 240px
+}
+
+.socBubble {
+  margin-left: 600px;
+  margin-right: auto;
+}
+
+.commenticon {
+  margin-top: -350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productshortdesc {
+  background-color: rgb(228, 243, 217);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  height: 396px;
+  text-align: center;
+  width: 376px;
+  float: right;
+  margin-right: 150px;
+}
+
+body .threesixty-wrapper {
+  margin: 30px auto;
+  width: 960px;
+  position: relative;
+}
+
+body .threesixty-wrapper .threesixty {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+body .threesixty-wrapper .threesixty img {
+  width: 300px;
+  height: 300px;
+}
+
+body .threesixty-wrapper .threesixty .ui-spinner {
+  width: 50px;
+  height: 50px;
+  background: #c2fccc;
+}
+
+body .threesixty-wrapper .threesixty .ui-spinner .side .fill {
+  background: #55fc5a;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+  opacity: 0.8;
+}
+
+body .threesixty-wrapper .threesixty .ui-spinner:after {
+  content: "";
+  background: transparent;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  display: block;
+}
+
+body .threesixty-wrapper .threesixty .ui-spinner {
+  margin: 270px auto;
+}
+
+body .threesixty-wrapper .label {
+  margin: 20px auto;
+  display: block;
+}
+

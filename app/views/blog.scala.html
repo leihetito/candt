@@ -11,27 +11,20 @@
         <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css")"/>
         <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/jQuery.iPicture.css")"/>
         <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/jquery.sidr.light.css")"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/jquery.classysocial.css")"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/jquery.threesixty.css")"/>
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.5.0.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-ui-1.8.9.min.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("javascripts/jQuery.iPicture.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.masonry.min.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("javascripts/modernizr-2.5.3.min.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.sidr.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.classysocial.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.threesixty.js")"></script>
 
 <script>
 jQuery(document).ready(function(){
-        $( "#iPicture" ).iPicture({
-                animation: true,
-                animationBg: "bgblack",
-                animationType: "ltr-slide",
-                pictures: ["picture1"],
-                button: "moreblack",
-                moreInfos:{"picture1":[{"id":"tooltip1","descr":"$299, where to buy","top":"185px","left":"43px"},
-                                       {"id":"tooltip2","descr":"$199, where to buy","top":"236px","left":"183px"},
-                                       {"id":"tooltip3","descr":"$399, where to buy","top":"61px","left":"226px"}]}
-              });
-
 
 $('#makeMeDraggable').draggable({
     cursor: 'move',
@@ -47,22 +40,20 @@ $('#tooltip1').sidr({
     name: 'comment-callback',
     side: 'right',
     source: function(name) {
-        return '<h1>Comments about this item: </h1><oi><li>user comment 1</li><li>user comment 2</li><li>user comment 3</li></ol>';
+        return '<h1>Comments about this item:</h1><img src="/assets/images/twitterusericon1.png" style="width: 32px; height: 32px">Mike Smith' +
+               '<h3>Looking for the perfect outfit for the summer? Look no further than #summerdress</h3>' +
+    '<img src="/assets/images/twitterusericon1.png" style="width: 32px; height: 32px">Mike Smith' +
+    '<h3>Looking for the perfect outfit for the summer? Look no further than #summerdress</h3>';
     }
 });
-$('#tooltip2').sidr({
-    name: 'comment-callback',
-    side: 'right',
-    source: function(name) {
-    return '<h1>Comments about this item: </h1><oi><li>user comment 1</li><li>user comment 2</li><li>user comment 3</li></ol>';
-    }
+
+$(".classysocial").each(function() {
+    new ClassySocial(this);
 });
-$('#tooltip3').sidr({
-    name: 'comment-callback',
-    side: 'right',
-    source: function(name) {
-    return '<h1>Comments about this item: </h1><oi><li>user comment 1</li><li>user comment 2</li><li>user comment 3</li></ol>';
-    }
+
+$('.threesixty').threeSixty({
+    dragDirection: 'horizontal',
+    useKeys: false
 });
 
 }); // end of ready
@@ -86,20 +77,35 @@ function handleDropEvent( event, ui ) {
             <a href="@routes.Application.index()"><h2>Clay & Twill</h2></a>
         </div>
 
-        <div class="content">
-           <div id="iPicture">
-            <div class="slide" style="margin-top: 100px;">
-             <div id="picture1" style="background: url('http://ak2.polyvoreimg.com/cgi/img-set/cid/91830604/id/YV4qQFArTjG02Z7nRcVM2w/size/l.jpg') no-repeat scroll 0 0 #393737; width: 300px; height: 300px;position: relative; margin:0 auto;"></div>
-            </div>
+        <div class="content clearfix">
+           <div style="margin-top: 100px;">
+             <img class="productimg" src="@routes.Assets.at("images/product1.jpg")">
+             <a id="tooltip1" href="#">
+                <img class="commenticon" src="@routes.Assets.at("images/comment.png")">
+             </a>
+             <div class="productshortdesc">Purple dress by AA Design<br><br><p>Product Details</p><br></div>
            </div>
         </div>
 
-        <div id="content">
-            <div id="makeMeDraggable">
-                <img src="http://lp.hm.com/hmprod?set=key[source],value[/model/2013/1CA%200184825%20001%2021%202003%203.jpg]&set=key[rotate],value[]&set=key[width],value[]&set=key[height],value[]&set=key[x],value[]&set=key[y],value[]&set=key[type],value[STILL_LIFE_FRONT]&hmver=3&call=url[file:/product/large]" style="width: 200px; height: 250px">
+        <span class="notes-marker-icon"></span>
+
+        <div class="classysocial bubble socBubble" style="float:center" data-arc-length="360" data-image-type="facebook"
+             data-picture="picozu" data-facebook-handle="picozu" data-google-handle="100585828531806464438"
+             data-linkedin-handle="173413024" data-twitter-handle="picozu_editor" data-pinterest-handle="picozu"
+             data-networks="facebook,twitter,pinterest,linkedin,google">
+            <a class="main active" title="Find Me Here" alt="Find Me Here">
+                <img src="@routes.Assets.at("images/picozubutton.jpg")" title="Find Me Here" alt="Find Me Here"></a>
+            <div class="network_holder">
+                <a class="network_button facebook" target="_blank" href="http://www.facebook.com/picozu" data-network="facebook" style="display: block; left: -36.879184148698656px; top: 75.54651859744241px;">Facebook</a>
+                <a class="network_button twitter" target="_blank" href="https://twitter.com/picozu_editor" data-network="twitter" style="display: block; left: -67px; top: 13.00000000000001px;">Twitter</a>
+                <a class="network_button pinterest" target="_blank" href="http://pinterest.com/picozu" data-network="pinterest" style="display: block; left: -36.8791841486987px; top: -49.54651859744237px;">Pinterest</a>
+                <a class="network_button linkedin" target="_blank" href="http://www.linkedin.com/profile/view?id=173413024" data-network="linkedin" style="display: block; left: 30.801674716505207px; top: -64.99423297454587px;">LinkedIn</a>
+                <a class="network_button google" target="_blank" href="https://plus.google.com/100585828531806464438" data-network="google" style="display: block; left: 85.07750943219355px; top: -21.710699129404603px;">Google Plus</a>
             </div>
-            <div id="makeMeDroppable">
-                <img id="droppableimg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR2UNNgtlb6r7BSQoxG1SV5pvcBWsfuCEYOqXX83EC0cKIXuiEa">
+        </div>
+
+        <div class="threesixty-wrapper">
+            <div class="threesixty" data-path="@routes.Assets.at("images/gem{index}.jpg")" data-count="4">
             </div>
         </div>
 

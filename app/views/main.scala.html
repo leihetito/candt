@@ -11,8 +11,8 @@
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.5.0.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-ui-1.8.9.min.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("javascripts/jQuery.iPicture.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.masonry.min.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("javascripts/modernizr-2.5.3.min.js")"></script>
@@ -42,6 +42,9 @@ $('#container').masonry({
                     <a class="brand" href="@routes.Application.index()">Clay & Twill</a>
                     <ul class="nav">
                         <li class="@("active".when(nav == "signup"))">
+                        <a href="@routes.Blog.index">Browse</a>
+                        </li>
+                        <li class="@("active".when(nav == "signup"))">
                         <a href="@routes.Blog.index">Blog</a>
                         </li>
                         <li class="@("active".when(nav == "contact"))">
@@ -56,14 +59,14 @@ $('#container').masonry({
 
             <div class="item">
                 <a href="/blog">
-                  <img src="http://media-cache-ak0.pinimg.com/736x/69/18/42/691842610809f0cb8280ff1f23c6cd0c.jpg" alt="" >
+                  <img src="@routes.Assets.at("images/tile1.jpg")" alt="" >
                   <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
 		<a href="/blog">
-                  <img src="http://media-cache-ec0.pinimg.com/736x/a0/fc/47/a0fc47eee44b78ec6893bdf123e58cd9.jpg" alt="" >
+                  <img src="@routes.Assets.at("images/tile2.jpg")" alt="" >
                   <p class="example-title"> &sect; AA Design </p>
                 </a>
 
@@ -71,70 +74,70 @@ $('#container').masonry({
 
             <div class="item">
                 <a href="/blog">
-                  <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR3wAYWh_w-bfATsVxviquSLehQ_mnZGVkLQRQiJ3JuelBHUN0T" alt="" >
+                  <img src="@routes.Assets.at("images/tile3.jpg")" alt="" >
                   <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                  <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTCsB2HVfJRlAVT52DcRFh_Ik1AzDhFM4u9aCgBrBeZWwoypbKbVw" alt="" >
+                  <img src="@routes.Assets.at("images/tile4.jpg")" alt="" >
                   <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuoGvvfL7nE1fwyAP5_BWqDWwjZMC__UpwC_H2o4_wxqGgQWADqw" alt="" >
+                  <img src="@routes.Assets.at("images/tile5.jpg")" alt="" >
                   <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQneeyHU4QtHjl-U535DC5dUZ4Y_R8zxbWizhMUV9WKFCvLhK9zig" alt="" >
+                <img src="@routes.Assets.at("images/tile6.jpg")" alt="" >
                 <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpD7Q2YeGaTBPFIwVlYMz74VRZqI8C7waUYponUWdX-QY73CZ_" alt="" >
+                <img src="@routes.Assets.at("images/tile7.jpg")" alt="" >
                 <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9mS7xZ2asfZEXtyGB79ac9CpdncmQTykMGqW6VU8MK6yLsUwZA" alt="" >
+                <img src="@routes.Assets.at("images/tile8.jpg")" alt="" >
                 <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjxczwNINnM3wi0NnKEqtBaVnkj0mGOyFJnhErYUehYqleOBKsWg" alt="" >
+                <img src="@routes.Assets.at("images/tile9.jpg")" alt="" >
                 <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSA_KbU9_dZJgUi5sqpE_N11ii7PhbN3gUtCp9XKMYUNbM0Lf7U" alt="" >
+                <img src="@routes.Assets.at("images/tile10.jpg")" alt="" >
                 <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQheqPQyiym5_41VMYuQ91aqrcpgLJt9pBQ72iWZmO_bkqKySeO" alt="" >
+                <img src="@routes.Assets.at("images/tile11.jpg")" alt="" >
                 <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/blog">
-                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQwCD-SO9EOx5aYNBFy8wLWwfjpFwhf-z5poWL1hRDWIZZIGTXLQw" alt="" >
+                <img src="@routes.Assets.at("images/tile12.jpg")" alt="" >
                 <p class="example-title"> &sect; AA Design </p>
                 </a>
             </div>
